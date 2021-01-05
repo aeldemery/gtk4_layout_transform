@@ -1,14 +1,14 @@
 namespace MathHelper {
     [CCode (cheader_filename = "math_helper.h", cname = "math_helper_perspective_3d")]
-    public void perspective_3d (Graphene.Point3D p1,
-                                Graphene.Point3D p2,
-                                Graphene.Point3D p3,
-                                Graphene.Point3D p4,
-                                Graphene.Point3D q1,
-                                Graphene.Point3D q2,
-                                Graphene.Point3D q3,
-                                Graphene.Point3D q4,
-                                out Graphene.Matrix m);
+    public void perspective_3d (Graphene.Point3D *p1,
+                                Graphene.Point3D *p2,
+                                Graphene.Point3D *p3,
+                                Graphene.Point3D *p4,
+                                Graphene.Point3D *q1,
+                                Graphene.Point3D *q2,
+                                Graphene.Point3D *q3,
+                                Graphene.Point3D *q4,
+                                Graphene.Matrix *m);
 
     [CCode (cheader_filename = "math_helper.h", cname = "math_helper_singular_value_decomposition")]
     public int singular_value_decomposition (double[] A,

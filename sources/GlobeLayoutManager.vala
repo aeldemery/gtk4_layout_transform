@@ -123,12 +123,12 @@ public class Gtk4Demo.GlobeLayoutManager : Gtk.LayoutManager {
                 (float) MathHelper.sphere_z (r, t_1, p_2)
             };
 
-            Graphene.Matrix[] matrix_out = { m };
+            //Graphene.Matrix[] matrix_out = { m };
 
             /* Get a matrix that moves p1 -> q1, p2 -> q2, ... */
-            MathHelper.perspective_3d (p1, p2, p3, p4, q1, q2, q3, q4, out matrix_out[0]);
+            MathHelper.perspective_3d (&p1, &p2, &p3, &p4, &q1, &q2, &q3, &q4, &m);
 
-            m = matrix_out[0];
+            // m = matrix_out[0];
 
             transform = transform.matrix (m);
 
